@@ -20,7 +20,7 @@ public class Part1and2 {
         while((string = bufferedReader.readLine()) != null) {
             if(string.equals("")) {
                 list.add(subList.stream().reduce(Integer::sum).get()); //direct get() since I know it has something in it
-                subList.clear();
+                subList.clear(); //
                 continue;
             }
             subList.add(Integer.parseInt(string));
