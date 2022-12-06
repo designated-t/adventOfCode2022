@@ -1,4 +1,4 @@
-package org.example;
+package org.day2;
 
 public enum Play {
 

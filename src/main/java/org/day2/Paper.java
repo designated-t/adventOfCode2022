@@ -1,23 +1,23 @@
-package org.example;
+package org.day2;
 
-public class Rock implements Input{
+public class Paper implements Input {
 
-
+    @Override
     public String getTheClass() {
-        return "ROCK";
+        return "PAPER";
     }
 
     @Override
     public void performPlay(String input) {
         switch (input) {
             case "X":
-                Main.ownScore += 3;
+                Main.ownScore += 1;
                 return;
             case "Y":
-                Main.ownScore += 4;
+                Main.ownScore += 5;
                 return;
             case "Z":
-                Main.ownScore += 8;
+                Main.ownScore += 9;
         }
     }
 }
