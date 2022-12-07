@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\blitz\\Desktop\\repos\\class-repo\\adventofcode\\src\\main\\java\\org\\example\\input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("src/main/java/org/day2/input.txt"));
 
         GetInput getInput = new GetInput();
 

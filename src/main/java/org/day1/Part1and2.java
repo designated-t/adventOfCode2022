@@ -10,7 +10,7 @@ import java.util.List;
 public class Part1and2 {
     public static void main(String[] args) throws IOException {
 
-        BufferedReader bufferedReader = new BufferedReader(new FileReader("C:\\Users\\blitz\\Desktop\\repos\\class-repo\\adventofcode\\src\\main\\java\\org\\day1\\input.txt"));
+        BufferedReader bufferedReader = new BufferedReader(new FileReader("src/main/java/org/day1/input.txt"));
 
         String string;
 

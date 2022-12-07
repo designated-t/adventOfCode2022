@@ -12,7 +12,7 @@ public class MAIN {
 
         Integer goalCount = 0;
 
-        BufferedReader reader = new BufferedReader(new FileReader("/Users/codecadet/Desktop/Repos/adventOfCode2022/src/main/java/org/day4/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("src/main/java/org/day4/input.txt"));
 
         String line = "";
 
