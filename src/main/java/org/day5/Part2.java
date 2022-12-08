@@ -83,13 +83,12 @@ public class Part2 {
      * @param indexTo   Index of the stack in the array where to put the boxes to
      */
     public static void performAction(Integer amount, Integer indexFrom, Integer indexTo) {
-        List<String> localList = new LinkedList<>();
+        LinkedList<String> localList = new LinkedList<>();
 
         for (int i = 0; i < amount; i++) {
-            localList.add(stackList.get(indexFrom - 1).pop());
+            localList.push(stackList.get(indexFrom - 1).pop());
         }
 
-        localList.sort(Comparator.reverseOrder());
-        localList.forEach(item -> stackList.get(indexTo - 1).add(item));
+        localList.forEach(item -> stackList.get(indexTo - 1).push(item));
     }
 }
