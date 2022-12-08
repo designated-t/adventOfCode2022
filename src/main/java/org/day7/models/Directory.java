@@ -1,6 +1,6 @@
 package org.day7.models;
 
-import org.day7.Part1;
+import org.day7.Part1and2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,11 +9,9 @@ public class Directory {
 
     private List<Directory> children = new ArrayList<>();
     private List<File> files = new ArrayList<>();
-    private final Directory MOTHER;
+    private final Directory MOTHER; //each directory knows its mother
 
-
-
-    private String name;
+    private final String name;
 
     public Directory(String name, Directory mother) {
         this.MOTHER = mother;
@@ -40,13 +38,21 @@ public class Directory {
         }
 
         if (name.equals("/")) {
-            return Part1.ROOT;
+            return Part1and2.ROOT;
         }
 
         return children.stream()
                 .filter(dir -> dir.getName().equals(name))
                 .findFirst()
                 .orElse(null);
+    }
+
+    public void fillListWithTotalSizes(List<Integer> list) {
+        list.add(getTotalSize());
+
+        for (Directory dir : children) {
+            dir.fillListWithTotalSizes(list);
+        }
     }
 
     public void addFile(File file) {
@@ -59,15 +65,5 @@ public class Directory {
 
     public String getName() {
         return name;
-    }
-
-    @Override
-    public String toString() {
-        return "Directory{" +
-                "children=" + children +
-                ", files=" + files +
-                ", MOTHER=" + MOTHER +
-                ", name='" + name + '\'' +
-                '}';
     }
 }

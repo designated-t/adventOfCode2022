@@ -1,7 +1,5 @@
 package org.day7.models;
 
-import java.util.List;
-
 public class File {
 
     public String name;
@@ -12,12 +10,7 @@ public class File {
         this.size = size;
     }
 
-
     public int getSize() {
         return size;
-    }
-
-    public String getName() {
-        return name;
     }
 }

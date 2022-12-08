@@ -63,7 +63,6 @@ public class Part2 {
         stackList.stream().forEach(stack -> builder.append(stack.get(0).charAt(1)));
 
         System.out.println(builder);
-
     }
 
     private static void populateLinkedList() {
